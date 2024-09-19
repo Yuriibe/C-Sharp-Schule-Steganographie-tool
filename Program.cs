@@ -21,45 +21,52 @@ class Program
     static void Main(string[] args)
     {
 
-        Bitmap image = new Bitmap("hund.png");
+        Bitmap image = new Bitmap("luffy.png");
 
-        if (true)
+        string input = "Hallo, das ist meine geheime nachricht die niemand lesen kann!!!!";
+        string binaryString = StringToBinary(input);
+
+        Console.WriteLine($"Binary representation of '{input}' is: {binaryString}");
+        int totalBits = binaryString.Length;
+
+        int bitIndex = 0;
+
+        for (int y = 0; y < image.Height; y++)
         {
-            for (int y = 0; y < image.Height; y++)
+            for (int x = 0; x < image.Width; x++)
             {
-                if (y < 1)
+
+                if (bitIndex >= totalBits)
                 {
-                    for (int x = 0; x < image.Width; x++)
-                    {
-                        if (x < 1)
-                        {
-                            RGBBinary binaryValues = GetPixelRGBBinary(image, x, y);
-                            Console.WriteLine($"Pixel ({x},{y}) - R: {binaryValues.Red}, G: {binaryValues.Green}, B: {binaryValues.Blue}");
-
-                            char redLSB = binaryValues.Red[binaryValues.Red.Length - 1];   // LSB of the Red component
-                            char greenLSB = binaryValues.Green[binaryValues.Green.Length - 1]; // LSB of the Green component
-                            char blueLSB = binaryValues.Blue[binaryValues.Blue.Length - 1];  // LSB of the Blue component
-
-                            Console.WriteLine($"Red LSB: {redLSB}");
-                            Console.WriteLine($"Green LSB: {greenLSB}");
-                            Console.WriteLine($"Blue LSB: {blueLSB}");
-
-                            binaryValues = ModifyLSB(binaryValues, '0', '1', '0');
-                            Console.WriteLine($"Modified Pixel - R: {binaryValues.Red}, G: {binaryValues.Green}, B: {binaryValues.Blue}");
-
-                        }
-                    }
+                    Console.WriteLine("Finished hiding all bits in the image.");
+                    break; // Exit the inner loop
                 }
+
+                RGBBinary binaryValues = GetPixelRGBBinary(image, x, y);
+                Console.WriteLine($"Pixel ({x},{y}) - R: {binaryValues.Red}, G: {binaryValues.Green}, B: {binaryValues.Blue}");
+
+                char redLSB = (bitIndex < totalBits) ? binaryString[bitIndex++] : '0';
+                char greenLSB = (bitIndex < totalBits) ? binaryString[bitIndex++] : '0';
+                char blueLSB = (bitIndex < totalBits) ? binaryString[bitIndex++] : '0';
+
+                Console.WriteLine($"Red LSB: {redLSB}");
+                Console.WriteLine($"Green LSB: {greenLSB}");
+                Console.WriteLine($"Blue LSB: {blueLSB}");
+
+                binaryValues = ModifyLSB(binaryValues, redLSB, greenLSB, blueLSB);
+                Console.WriteLine($"Modified Pixel - R: {binaryValues.Red}, G: {binaryValues.Green}, B: {binaryValues.Blue}");
+
+                Color newRGBColor = BinaryToString(binaryValues);
+                image.SetPixel(x, y, newRGBColor);
+
+
+
             }
+
 
         }
 
-        string input = "Hello World";
-        string binaryString = StringToBinary(input);
-        Console.WriteLine($"Binary representation of '{input}' is: {binaryString}");
         image.Save("output.png");
-
-
         image.Dispose();
     }
 
@@ -75,8 +82,22 @@ class Program
         }
 
         return binary.ToString();
+    }
 
+    public static Color BinaryToString(RGBBinary rGBBinary)
+    {
 
+        int red = Convert.ToInt32(rGBBinary.Red, 2);
+        int green = Convert.ToInt32(rGBBinary.Green, 2);
+        int blue = Convert.ToInt32(rGBBinary.Blue, 2);
+
+        // Create the RGB color
+        Color color = Color.FromArgb(red, green, blue);
+
+        Console.WriteLine($"Red: {red}, Green: {green}, Blue: {blue}");
+        Console.WriteLine($"Color: {color}");
+
+        return color;
     }
 
     public static RGBBinary GetPixelRGBBinary(Bitmap image, int x, int y)
