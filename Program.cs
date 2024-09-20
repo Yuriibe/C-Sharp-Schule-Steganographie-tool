@@ -4,8 +4,8 @@ class Program
 {
     static void Main(string[] args)
     {
-        Encoder.Encode();
-        //System.Console.WriteLine(Decoder.DecodeMessage("output.png"));
+        Encoder.Encode("My Very Secret and Hidden Message no one is allowed to ever see!");
+        Decoder.Decode();
     }
 
 }

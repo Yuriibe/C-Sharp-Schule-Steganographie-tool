@@ -18,19 +18,19 @@ public struct RGBBinary
 
 public class Encoder
 {
-    public static void Encode()
+    public static void Encode(string input)
     {
 
         Bitmap image = new Bitmap("luffy.png");
 
-        string input = "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et e";
+        //string input = "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et e";
         string binaryString = StringToBinary(input);
 
         Console.WriteLine($"Binary representation of '{input}' is: {binaryString}");
         int totalBits = binaryString.Length;
 
         int bitIndex = 0;
-        bool demo = true;
+        bool demo = false;
         for (int y = 0; y < image.Height; y++)
         {
             for (int x = 0; x < image.Width; x++)
