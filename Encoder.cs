@@ -18,7 +18,7 @@ public struct RGBBinary
 
 public class Encoder
 {
-    public static void Encode(string input)
+    public static void Encode(string input, bool demo = false)
     {
 
         Bitmap image = new Bitmap("luffy.png");
@@ -30,7 +30,7 @@ public class Encoder
         int totalBits = binaryString.Length;
 
         int bitIndex = 0;
-        bool demo = false;
+
         for (int y = 0; y < image.Height; y++)
         {
             for (int x = 0; x < image.Width; x++)
