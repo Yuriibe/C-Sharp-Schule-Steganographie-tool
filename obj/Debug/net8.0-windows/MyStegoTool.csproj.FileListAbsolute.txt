@@ -21,4 +21,3 @@ C:\Users\direx\c#-project\MyStegoTool\obj\Debug\net8.0-windows\MyStegoTool.pdb
 C:\Users\direx\c#-project\MyStegoTool\obj\Debug\net8.0-windows\MyStegoTool.genruntimeconfig.cache
 C:\Users\direx\c#-project\MyStegoTool\obj\Debug\net8.0-windows\ref\MyStegoTool.dll
 C:\Users\direx\c#-project\MyStegoTool\obj\Debug\net8.0-windows\App.g.cs
-C:\Users\direx\c#-project\MyStegoTool\obj\Debug\net8.0-windows\MyStegoTool_MarkupCompile.lref
