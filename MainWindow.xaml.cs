@@ -18,10 +18,26 @@ namespace SteganographyToolUI;
 /// </summary>
 public partial class MainWindow : Window
 {
+    private string selectedImagePath;
+    private bool isDemo;
     public MainWindow()
     {
         InitializeComponent();
     }
+
+
+    private void ToggleSwitch_Checked(object sender, RoutedEventArgs e)
+    {
+        isDemo = true;
+        MessageBox.Show("Demo mode Enabled");
+    }
+
+    private void ToggleSwitch_Unchecked(object sender, RoutedEventArgs e)
+    {
+        isDemo = false;
+        MessageBox.Show("Demo mode Disabled");
+    }
+
 
     private void Button_Click(object sender, RoutedEventArgs e)
     {
@@ -53,10 +69,33 @@ public partial class MainWindow : Window
 
         if (openFileDialog.ShowDialog() == true)
         {
+            selectedImagePath = openFileDialog.FileName;
             BitmapImage bitmap = new BitmapImage(new Uri(openFileDialog.FileName));
             imgDisplay.Source = bitmap;
         }
 
+    }
+
+    private void BtnEncodeImage(object sender, RoutedEventArgs e)
+    {
+        // Check if an image was uploaded
+        if (!string.IsNullOrEmpty(selectedImagePath))
+        {
+            // Load the selected image as a Bitmap and encode it
+            using (System.Drawing.Bitmap bitmap = new System.Drawing.Bitmap(selectedImagePath))
+            {
+                Encoder.Encode(inputTextBox.Text, bitmap, isDemo);
+            }
+        }
+        else
+        {
+            // Optionally, display an error message or notification that no image was selected
+            MessageBox.Show("Please upload an image before encoding.");
+        }
+    }
+    private void BtnDecodeImage(object sender, RoutedEventArgs e)
+    {
+        Decoder.Decode();
     }
 
 }

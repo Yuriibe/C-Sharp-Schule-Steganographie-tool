@@ -41,6 +41,8 @@
                        Foreground="#666"/>
         </StackPanel>
 
+
+
         <!-- Main Content Grid -->
         <Grid Margin="20"
               VerticalAlignment="Center">
@@ -48,6 +50,16 @@
                 <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
+
+            <CheckBox x:Name="toggleSwitch"
+                      Content="Enable Steganography"
+                      HorizontalAlignment="Left"
+                      VerticalAlignment="Top"
+                      IsChecked="False"
+                      Checked="ToggleSwitch_Checked"
+                      Unchecked="ToggleSwitch_Unchecked"
+                      Width="200"
+                      Height="30"/>
 
             <!-- Left: Method Selection -->
             <StackPanel Grid.Column="0"
@@ -63,7 +75,21 @@
                     <ComboBoxItem Content="Future Method 2"/>
                 </ComboBox>
 
+
+                <TextBox x:Name="inputTextBox"
+                         Width="200"
+                         Height="30"
+                         HorizontalAlignment="Left"
+                         VerticalAlignment="Top"
+                         Margin="10,10,0,0"/>
+
                 <Grid>
+
+                    <Image Name="imgDisplay"
+                           Width="300"
+                           Height="300"
+                           HorizontalAlignment="Center"
+                           VerticalAlignment="Center"/>
                     <Button Content="Load Image"
                             Width="150"
                             Height="40"
@@ -72,11 +98,6 @@
                             Foreground="White"
                             Style="{StaticResource RoundedButtonStyle}"
                             Click="BtnUploadImage_Click"/>
-                    <Image Name="imgDisplay"
-                           Width="300"
-                           Height="300"
-                           HorizontalAlignment="Center"
-                           VerticalAlignment="Center"/>
                 </Grid>
             </StackPanel>
 
@@ -95,7 +116,8 @@
                     Height="40"
                     Background="#4CAF50"
                     Foreground="White"
-                    Style="{StaticResource RoundedButtonStyle}"/>
+                    Style="{StaticResource RoundedButtonStyle}"
+                    Click="BtnEncodeImage"/>
 
             <Button Content="Decode"
                     Width="100"
@@ -103,7 +125,8 @@
                     Background="#F44336"
                     Foreground="White"
                     Margin="20,0,0,0"
-                    Style="{StaticResource RoundedButtonStyle}"/>
+                    Style="{StaticResource RoundedButtonStyle}"
+                    Click="BtnDecodeImage"/>
 
         </StackPanel>
     </Grid>

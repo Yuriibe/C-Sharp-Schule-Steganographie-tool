@@ -18,10 +18,10 @@ public struct RGBBinary
 
 public class Encoder
 {
-    public static void Encode(string input, bool demo = false)
+    public static void Encode(string input, Bitmap image, bool demo = false)
     {
 
-        Bitmap image = new Bitmap("luffy.png");
+        //Bitmap image = new Bitmap("luffy.png");
 
         string binaryString = StringToBinary(input);
 
