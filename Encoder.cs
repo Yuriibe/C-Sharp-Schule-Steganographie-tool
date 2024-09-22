@@ -23,7 +23,6 @@ public class Encoder
 
         Bitmap image = new Bitmap("luffy.png");
 
-        //string input = "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et e";
         string binaryString = StringToBinary(input);
 
         Console.WriteLine($"Binary representation of '{input}' is: {binaryString}");
