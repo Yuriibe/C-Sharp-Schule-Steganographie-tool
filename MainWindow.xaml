@@ -19,6 +19,7 @@
                                 CornerRadius="10">
                             <ContentPresenter HorizontalAlignment="Center"
                                               VerticalAlignment="Center"/>
+                                              
                         </Border>
                     </ControlTemplate>
                 </Setter.Value>
