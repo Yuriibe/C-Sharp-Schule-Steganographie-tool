@@ -5,9 +5,9 @@ using System.IO;
 
 public class Decoder
 {
-    public static void Decode()
+    public static string Decode(Bitmap image)
     {
-        Bitmap image = new Bitmap("output.png");
+        //Bitmap image = new Bitmap("output.png");
         StringBuilder binaryString = new StringBuilder();
 
         for (int y = 0; y < image.Height; y++)
@@ -33,6 +33,7 @@ public class Decoder
         File.WriteAllText(filePath, textToWrite);
 
         Console.WriteLine($"Text successfully written to {filePath}");
+        return textToWrite;
     }
 
 

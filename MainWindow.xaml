@@ -1,7 +1,9 @@
 ﻿<Window x:Class="SteganographyToolUI.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="SteganoSaurus" Height="600" Width="800">
+        Title="SteganoSaurus" Height="600" Width="800"
+        Icon="C:\Users\Chalupka\Documents\c#-projekt\C-Sharp-Schule-Steganographie-tool\Resources\stego.ico"
+        Background="#1C1C1E">
 
 
          <Window.Resources>
@@ -40,7 +42,7 @@
  
                 <Button Content="Decode" Style="{StaticResource RoundedButtonStyle}"
                         Padding="10" Margin="5" Foreground="White" Background="#555"
-                        Width="100" Height="40"/>
+                        Width="100" Height="40" Click="BtnDecode_Click"/>
             </StackPanel>
 
         <!-- Main Content Area -->

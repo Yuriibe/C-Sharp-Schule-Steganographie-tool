@@ -16,15 +16,16 @@ namespace SteganographyToolUI;
 /// <summary>
 /// Interaction logic for MainWindow.xaml
 /// </summary>
-public partial class EncodeControler : UserControl
+public partial class DecodeControler : UserControl
 {
     private string selectedImagePath;
     private bool isDemo;
 
-    public EncodeControler()
+    public DecodeControler()
     {
         InitializeComponent();
     }
+
     private void ToggleSwitch_Checked(object sender, RoutedEventArgs e)
     {
         isDemo = true;
@@ -37,14 +38,6 @@ public partial class EncodeControler : UserControl
         MessageBox.Show("Demo mode Disabled");
     }
 
-
-    private void Button_Click(object sender, RoutedEventArgs e)
-    {
-        // string inputText = InputTextBox.Text;
-        // System.Console.WriteLine($"You entered: {inputText}");
-        // Encoder.Encode(inputText);
-        //  Decoder.Decode();
-    }
 
     private void BtnUploadImage_Click(object sender, RoutedEventArgs e)
     {
@@ -80,7 +73,7 @@ public partial class EncodeControler : UserControl
 
     }
 
-    private void BtnEncodeImage(object sender, RoutedEventArgs e)
+    private void BtnDecodeImage(object sender, RoutedEventArgs e)
     {
         // Check if an image was uploaded
         if (!string.IsNullOrEmpty(selectedImagePath))
@@ -88,7 +81,7 @@ public partial class EncodeControler : UserControl
             // Load the selected image as a Bitmap and encode it
             using (System.Drawing.Bitmap bitmap = new System.Drawing.Bitmap(selectedImagePath))
             {
-                Encoder.Encode(inputTextBox.Text, bitmap, isDemo);
+                decodedText.Text = Decoder.Decode(bitmap);
             }
         }
         else
@@ -96,8 +89,8 @@ public partial class EncodeControler : UserControl
             // Optionally, display an error message or notification that no image was selected
             MessageBox.Show("Please upload an image before encoding.");
         }
-    }
 
+    }
 
 }
 

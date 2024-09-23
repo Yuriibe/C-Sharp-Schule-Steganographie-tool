@@ -15,6 +15,12 @@ namespace SteganographyToolUI
             MainContent.Content = new EncodeControler();
         }
 
+        private void BtnDecode_Click(object sender, RoutedEventArgs e)
+        {
+            // Load the EncodeUserControl into the ContentControl
+            MainContent.Content = new DecodeControler();
+        }
+
 
     }
 }
