@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\direx\\c#-project\\MyStegoTool\\MyStegoTool.csproj": {}
+    "C:\\Users\\Chalupka\\Documents\\c#-projekt\\C-Sharp-Schule-Steganographie-tool\\MyStegoTool.csproj": {}
   },
   "projects": {
-    "C:\\Users\\direx\\c#-project\\MyStegoTool\\MyStegoTool.csproj": {
+    "C:\\Users\\Chalupka\\Documents\\c#-projekt\\C-Sharp-Schule-Steganographie-tool\\MyStegoTool.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\direx\\c#-project\\MyStegoTool\\MyStegoTool.csproj",
+        "projectUniqueName": "C:\\Users\\Chalupka\\Documents\\c#-projekt\\C-Sharp-Schule-Steganographie-tool\\MyStegoTool.csproj",
         "projectName": "MyStegoTool",
-        "projectPath": "C:\\Users\\direx\\c#-project\\MyStegoTool\\MyStegoTool.csproj",
-        "packagesPath": "C:\\Users\\direx\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\direx\\c#-project\\MyStegoTool\\obj\\",
+        "projectPath": "C:\\Users\\Chalupka\\Documents\\c#-projekt\\C-Sharp-Schule-Steganographie-tool\\MyStegoTool.csproj",
+        "packagesPath": "C:\\Users\\Chalupka\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Chalupka\\Documents\\c#-projekt\\C-Sharp-Schule-Steganographie-tool\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\direx\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\Chalupka\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0-windows"

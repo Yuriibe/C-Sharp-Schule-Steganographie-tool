@@ -20,15 +20,18 @@ public class Encoder
 {
     public static void Encode(string input, Bitmap image, bool demo = false)
     {
-
-        //Bitmap image = new Bitmap("luffy.png");
-
         string binaryString = StringToBinary(input);
 
-        Console.WriteLine($"Binary representation of '{input}' is: {binaryString}");
         int totalBits = binaryString.Length;
 
         int bitIndex = 0;
+
+        int totalBitsImage = image.Height * image.Width * 3;
+
+        if (totalBits > totalBitsImage)
+        {
+            return;
+        }
 
         for (int y = 0; y < image.Height; y++)
         {

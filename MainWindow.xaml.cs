@@ -49,6 +49,7 @@ public partial class MainWindow : Window
 
     private void BtnUploadImage_Click(object sender, RoutedEventArgs e)
     {
+
         OpenFileDialog openFileDialog = new OpenFileDialog
         {
             Filter = "Image files (*.png)|*.png"
@@ -72,6 +73,10 @@ public partial class MainWindow : Window
             selectedImagePath = openFileDialog.FileName;
             BitmapImage bitmap = new BitmapImage(new Uri(openFileDialog.FileName));
             imgDisplay.Source = bitmap;
+            double result = (bitmap.Height * bitmap.Width * 3.0); // Ensure it's a double by using 3.0
+            double roundedResult = Math.Floor(result);
+            MessageBox.Show($"Total amount of available bits: {roundedResult.ToString()}");
+
         }
 
     }
