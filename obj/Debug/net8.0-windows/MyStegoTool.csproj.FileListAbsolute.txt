@@ -44,3 +44,7 @@ C:\Users\Chalupka\Documents\c#-projekt\C-Sharp-Schule-Steganographie-tool\obj\De
 C:\Users\Chalupka\Documents\c#-projekt\C-Sharp-Schule-Steganographie-tool\obj\Debug\net8.0-windows\MyStegoTool.pdb
 C:\Users\Chalupka\Documents\c#-projekt\C-Sharp-Schule-Steganographie-tool\obj\Debug\net8.0-windows\MyStegoTool.genruntimeconfig.cache
 C:\Users\Chalupka\Documents\c#-projekt\C-Sharp-Schule-Steganographie-tool\obj\Debug\net8.0-windows\ref\MyStegoTool.dll
+C:\Users\Chalupka\Documents\c#-projekt\C-Sharp-Schule-Steganographie-tool\obj\Debug\net8.0-windows\EncodeControler.baml
+C:\Users\Chalupka\Documents\c#-projekt\C-Sharp-Schule-Steganographie-tool\obj\Debug\net8.0-windows\EncodeControler.g.cs
+C:\Users\Chalupka\Documents\c#-projekt\C-Sharp-Schule-Steganographie-tool\obj\Debug\net8.0-windows\DecodeControl.baml
+C:\Users\Chalupka\Documents\c#-projekt\C-Sharp-Schule-Steganographie-tool\obj\Debug\net8.0-windows\DecodeControl.g.cs
