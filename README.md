@@ -1,5 +1,5 @@
 SteganoSaurus - Steganography Tool 🦖🔒
-
+<img src="/images/Steganosauros.png" alt="StegoSaurus Logo" width="200">
 Overview
 SteganoSaurus is a steganography tool designed to hide and extract secret messages within images using various steganographic methods, including the well-known Least Significant Bit (LSB) technique.this tool aims to demonstrate how data can be hidden within media files, undetectable to the naked eye.
 
