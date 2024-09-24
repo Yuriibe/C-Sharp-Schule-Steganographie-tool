@@ -1,6 +1,6 @@
 <img src="/images/Steganosauros.png" alt="SteganoSaurus Logo" width="200">
 
-# SteganoSaurus - Steganography Tool 🦖🔒
+# SteganoSaurus - Steganography Tool 🦕🔒
 
 ## Overview
 
