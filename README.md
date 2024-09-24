@@ -1,4 +1,4 @@
-<img src="/images/Steganosauros.png" alt="StegoSaurus Logo" width="200">
+<img src="/images/Steganosauros.png" alt="SteganoSaurus Logo" width="200">
 
 # SteganoSaurus - Steganography Tool 🦖🔒
 
@@ -18,5 +18,5 @@ SteganoSaurus is a steganography tool designed to hide and extract secret messag
 
 1. **Choose an image**: Upload an image file to hide your message in.
 2. **Enter your message**: Type in the secret message you want to hide.
-3. **Encode the message**: StegoSaurus will subtly alter the image to embed your hidden data.
-4. **Decode a message**: If an image contains hidden data, StegoSaurus can retrieve and display the secret message.
+3. **Encode the message**: SteganoSaurus  will subtly alter the image to embed your hidden data.
+4. **Decode a message**: If an image contains hidden data, SteganoSaurus can retrieve and display the secret message.
