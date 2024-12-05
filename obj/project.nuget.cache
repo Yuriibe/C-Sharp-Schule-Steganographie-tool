@@ -1,11 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "+udk82TRY9o=",
+  "dgSpecHash": "tiv5WceuhX4=",
   "success": true,
-  "projectFilePath": "C:\\Users\\Chalupka\\Documents\\c#-projekt\\C-Sharp-Schule-Steganographie-tool\\MyStegoTool.csproj",
+  "projectFilePath": "C:\\Users\\Alex\\vscode-projects\\C-Sharp-Schule-Steganographie-tool\\MyStegoTool.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Chalupka\\.nuget\\packages\\microsoft.win32.systemevents\\8.0.0\\microsoft.win32.systemevents.8.0.0.nupkg.sha512",
-    "C:\\Users\\Chalupka\\.nuget\\packages\\system.drawing.common\\8.0.8\\system.drawing.common.8.0.8.nupkg.sha512"
+    "C:\\Users\\Alex\\.nuget\\packages\\microsoft.win32.systemevents\\8.0.0\\microsoft.win32.systemevents.8.0.0.nupkg.sha512",
+    "C:\\Users\\Alex\\.nuget\\packages\\system.drawing.common\\8.0.8\\system.drawing.common.8.0.8.nupkg.sha512"
   ],
   "logs": []
 }

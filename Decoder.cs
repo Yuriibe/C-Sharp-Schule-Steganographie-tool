@@ -7,22 +7,23 @@ public class Decoder
 {
     public static string Decode(Bitmap image)
     {
-        //Bitmap image = new Bitmap("output.png");
+   
         StringBuilder binaryString = new StringBuilder();
 
         for (int y = 0; y < image.Height; y++)
         {
             for (int x = 0; x < image.Width; x++)
             {
+                 // Retrieve the RGB binary values for the pixel at coordinates (x, y)
                 RGBBinary binaryValues = GetPixelRGBBinary(image, x, y);
-                //Console.WriteLine($"Pixel ({x},{y}) - R: {binaryValues.Red}, G: {binaryValues.Green}, B: {binaryValues.Blue}");
+                // Append the Least Significant Bit (LSB) to the binary string
                 binaryString.Append(GetLSB(binaryValues.Red));
                 binaryString.Append(GetLSB(binaryValues.Green));
                 binaryString.Append(GetLSB(binaryValues.Blue));
 
             }
         }
-
+        // Convert the binary string representation into a readable text message.
         string message = BinaryToText(binaryString.ToString());
 
         // Console.WriteLine("Decoded message: " + message);
@@ -75,7 +76,7 @@ public class Decoder
 
     static char GetLSB(string binaryValue)
     {
-        // The LSB is simply the last character of the binary string
+        // Returns The LSB which is simply the last character of the binary string 
         return binaryValue[binaryValue.Length - 1];
     }
 }

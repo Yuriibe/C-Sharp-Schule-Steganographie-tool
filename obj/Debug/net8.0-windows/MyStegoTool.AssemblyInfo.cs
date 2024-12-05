@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MyStegoTool")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2591da4010c1a9d986b0e7742279ba2a7dde56b0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6b4b61dc1f5e6b18962b9f987e9560c19393548d")]
 [assembly: System.Reflection.AssemblyProductAttribute("MyStegoTool")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MyStegoTool")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
